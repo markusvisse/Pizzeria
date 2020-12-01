@@ -1,150 +1,96 @@
-<?php
-
+$errors = [];
 if(strlen($_POST['login'])<4)
 {
-    echo 'login ma mniej niz 4 znaki';
+    $errors[] = 'login ma mniej niz 4 znaki';
 }
-else
-{
     if(strlen($_POST['login'])>15)
     {
-        echo 'login jest za dlugi (l>15)';
+        $errors[] = 'login jest za dlugi (l>15)';
     }
-    else
-    { //sprawdzam czy haslo posiada dużą litere, przynajmniej 1 cyfre oraz czy ma więcej niż 6 znaków
+    //sprawdzam czy haslo posiada dużą litere, przynajmniej 1 cyfre oraz czy ma więcej niż 6 znaków
         if(!preg_match('/[A-Z]/', $_POST['password'])||!preg_match('/\d/', $_POST['password'])&&strlen($_POST['password'])>6)
         {
-            echo 'haslo musi miec przynajmniej 1 liczbę oraz dużą literę oraz byc dluzsze niz 6 znakow';
+            $errors[] = 'haslo musi miec przynajmniej 1 liczbę oraz dużą literę oraz byc dluzsze niz 6 znakow';
         }
-        else
-        {
+        
             if(strlen($_POST['password'])>25)
             {
-                echo 'podano zbyt dlugie haslo';
+                $errors[] = 'podano zbyt dlugie haslo';
             }
-            else
-            {
                 if($_POST['password']!=$_POST['2_password'])
                 {
-                    echo 'hasla sie nie zgadzaja';
+                    $errors[] = 'hasla sie nie zgadzaja';
                 }
-                else
-                {//sprawdzam czy nieprawdą jest, że: zmienna email ma w sobie znak "@"
+                //sprawdzam czy nieprawdą jest, że: zmienna email ma w sobie znak "@"
                     if(!strpos($_POST['email'],"@"))
                     {
-                        echo 'nieprawidlowa forma email (email bez @)';
+                        $errors[] = 'nieprawidlowa forma email (email bez @)';
                     }
-                    else
-                    {
                         if(strlen($_POST['email'])>25)
                         {
-                            echo 'podano zbyt dlugi email';
+                            $errors[] = 'podano zbyt dlugi email';
                         }
-                        else
-                        {
                             if(strlen($_POST['email'])<5)
                             {
-                                echo 'podano zbyt krotki email';
+                                $errors[] = 'podano zbyt krotki email';
                             }
-                            else
-                            {
                                 if(strlen($_POST['name'])>20)
                                 {
-                                    echo 'podano zbyt dlugie imie';
+                                    $errors[] = 'podano zbyt dlugie imie';
                                 }
-                                else
-                                {
                                     if(strlen($_POST['name'])<2)
                                     {
-                                        echo 'podano zbyt krotkie imie';
+                                        $errors[] = 'podano zbyt krotkie imie';
                                     }
-                                    else
-                                    {
                                         if(strlen($_POST['surname'])>25)
                                         {
-                                            echo 'podano zbyt dlugie nazwisko';
+                                            $errors[] = 'podano zbyt dlugie nazwisko';
                                         }
-                                        else
-                                        {
                                             if(strlen($_POST['surname'])<3)
                                             {
-                                                echo 'podano zbyt krotkie nazwisko';
+                                                $errors[] = 'podano zbyt krotkie nazwisko';
                                             }
-                                            else
-                                            {
                                                 if(strlen($_POST['phone_number'])>9)
                                                 {
-                                                    echo'podano zbyt dlugi numer telefonu';
+                                                    $errors[] = zbyt dlugi numer telefonu';
                                                 }
-                                                else
-                                                {
                                                     if(strlen($_POST['phone_number'])<7)
                                                     {
-                                                        echo'podano zbyt krotki numer telefonu';
+                                                        e$errors[] = cho'podano zbyt krotki numer telefonu';
                                                     }
-                                                    else
-                                                    {
                                                         if(strlen($_POST['city'])>20)
                                                         {
-                                                            echo 'zbyt dluga nazwa miasta';
+                                                            $errors[] = 'zbyt dluga nazwa miasta';
                                                         }
-                                                        else
-                                                        {
                                                             if(strlen($_POST['city'])<3)
                                                             {
-                                                                echo 'zbyt krotka nazwa miasta';
+                                                                $errors[] = 'zbyt krotka nazwa miasta';
                                                             }
-                                                            else
-                                                            {
                                                                 if(!strpos($_POST['postcode'], "-"))
                                                                 {
-                                                                    echo 'nieprawidlowa forma kodu pocztowego';
+                                                                    $errors[] = 'nieprawidlowa forma kodu pocztowego';
                                                                 }
-                                                                else
-                                                                {
                                                                     if(strlen($_POST['postcode'])!=6)
                                                                     {
-                                                                        echo 'blad w kodzie pocztowym';
+                                                                        $errors[] = 'blad w kodzie pocztowym';
                                                                     }
-                                                                    else
-                                                                    {
                                                                         if(strlen($_POST['street'])>20)
                                                                         {
-                                                                            echo'zbyt dluga nazwa ulicy';
+                                                                            $errors[] = dluga nazwa ulicy';
                                                                         }
-                                                                        else
-                                                                        {
                                                                             if(strlen($_POST['street'])<3)
                                                                             {
-                                                                                echo'zbyt krotka nazwa ulicy';
+                                                                                $errors[] = krotka nazwa ulicy';
                                                                             }
-                                                                            else
-                                                                            {
                                                                                 if(strlen($_POST['street_number'])>10)
                                                                                 {
-                                                                                    echo'zbyt dluga nazwa domu';
+                                                                                    $errors[] = dluga nazwa domu';
                                                                                 }
-                                                                                else
-                                                                                {
-                                                                                    echo 'all good';
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                                                                                    
+if(count($errors)){
+	foreach($errors as $error):
+		echo "$error<br/>";
+	endforeach;
+} else {
+echo 'all good';
 }
