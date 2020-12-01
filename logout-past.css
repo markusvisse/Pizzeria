@@ -1,0 +1,11 @@
+#logged-out{
+
+}
+#login-again{
+    background-color: none;
+    text-decoration: none;
+    color: black;
+}
+#login-again:hover{
+    background-color: orange;
+}

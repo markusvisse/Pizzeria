@@ -1,0 +1,71 @@
+#navigation{
+    width: 1300px;
+    height: 350px;
+    background-color: pink;
+}
+#logo{
+    float: left;
+    height: 250px;
+    width: 400px;
+    background-color: yellow;
+}
+#name{
+    font-size: 80px;
+    text-align: center;
+    background-color: grey;
+    height: 250px;
+    width: 700px;
+    float: left;
+    line-height: 240px;
+}
+#secondary{
+    height: 250px;
+    width: 200px;
+    float: left;
+}
+#logout{
+    background-color: purple;
+    height: 125px;
+    width: 200px;
+    clear: both;
+}
+#logout-text{
+    text-decoration: none;
+    background-color: none;
+    color: black;
+}
+#logout-text:hover{
+    background-color: yellow;
+}
+#clock{
+    height: 125px;
+    width: 200px;
+    clear: both;
+    background-color: peru;
+    float: right;
+    font-size: 23px;
+}
+#pasek{
+    height: 100px;
+    width: 1300px;
+    background-color: lawngreen;
+    text-align: center;
+}
+.wybor{
+    float:left;
+    font-size: 30px;
+    height: 100px;
+    width: 325px;
+    line-height: 100px;
+    
+}
+.wybor:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.wybor{
+    background-color: none;
+    text-decoration: none;
+    color: black;
+}
+

@@ -1,0 +1,112 @@
+#header-menu{
+    font-size: 45px;
+    text-align: center;
+    height: 60px;
+    width: 1300px;
+    background-color: purple;
+}
+#menu{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 2950px;
+    background-color: cadetblue;
+}
+.rectangle{
+    width: 900px;
+    height: 250px;
+    background-color: rosybrown;
+}
+.photo{
+    padding: 10px;
+    float: left;
+    height: 230px;
+    width: 230px;
+    background-color: royalblue;
+}
+.photo-jpg{
+    height: 230px;
+    width: 230px;
+}
+.decription{
+    float: left;
+    height: 250px;
+    width: 400px;
+    background-color: papayawhip;
+}
+.name{
+    font-size: 40px;
+    padding-top: 25px;
+    width: 400px;
+    height: 75px;
+    background-color: floralwhite;
+}
+.specs{
+    width: 400px;
+    height: 150px;
+    background-color: chocolate;
+    float: left;
+}
+.components{
+    width: 400px;
+    height: 100px;
+    background-color: yellow;
+}
+.name-components{
+    width: 400px;
+    height: 30px;
+    background-color: wheat;
+    font-size: 30px;
+    line-height: 25px;
+}
+.name-of-components{
+    font-size: 19px;
+}
+.size{
+    width: 400px;
+    height: 50px;
+    background-color: aqua;
+    font-size: 20px;
+}
+.size1{
+    height: 25px;
+    width: 400px;
+    background-color: rebeccapurple;
+}
+.size2{
+    float:left;
+    height: 25px;
+    width: 400px;
+    background-color: rebeccapurple;
+}
+.square{
+    float: left;
+    height: 250px;
+    width: 250px;
+    background-color: coral;
+}
+.price{
+    height: 125px;
+    width: 250px;
+    background-color: honeydew;
+    font-size: 30px;
+    line-height: 110px;
+}
+.add-to-cart{
+    float:left;
+    height: 125px;
+    width: 250px;
+    background-color: khaki;
+}
+.cart-text{
+    background-color: none;
+    text-decoration: none;
+    color: black;
+    font-size: 27px;
+    line-height: 125px;
+    border-radius: 10px;
+    border: 2px solid #73AD21;
+}
+.cart-text:hover{
+    background-color: peru;
+}
